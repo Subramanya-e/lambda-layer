@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - pip install -r python/requirements.txt -t python/
+
+  build:
+    commands:
+      - zip -r layer.zip python/
+
+artifacts:
+  files:
+    - layer.zip
